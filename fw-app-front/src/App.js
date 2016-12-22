@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header logo={''}>
+        <Header logo={logo}>
           <h1>Hello lady!</h1>
         </Header>
       </div>
