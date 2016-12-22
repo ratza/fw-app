@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Header from './layout/Header'
-import logo from './logo.svg';
+// import LoginPage from './login/login_page';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header logo={logo}>
-          <h1>Hello lady!</h1>
-        </Header>
+        It's home page
+        <Link to='/login'>go login</Link>
+        {this.props.children}
       </div>
     );
   }
