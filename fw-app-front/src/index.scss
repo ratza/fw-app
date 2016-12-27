@@ -1,5 +1,65 @@
+$mainColor: #fff;
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: $mainColor;
+  background: url('img/bg.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.App-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .main-content-block {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    a {
+      color: $mainColor;
+      text-shadow: 1px 1px #0c0c0c;
+    }
+
+    .navbar {
+      margin: 0;
+      border: 0;
+
+      .navbar-nav>li>a {
+        &:hover,
+        &:focus {
+          background-color: rgba(255,255,255, 0.3);
+          text-shadow: 0;
+          transition: background-color 0.3s ease;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ddd;
+  }
+}
+
+.form-wrapper {
+  border: 1px solid transparent;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255, 0.6);
 }

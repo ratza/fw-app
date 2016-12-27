@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
-import './App.css';
-import {Link} from 'react-router';
+import React, { Component } from 'react'
+import './App.css'
+import Header from './layout/header/Header'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="container">
-          It's home page
-          <Link to='/login'>go login</Link>
+      <div className="App-container" id="App">
+        <Header/>
+
+        <div className="main-content-block">
+          <div className="container">
+            {this.props.children}
+          </div>
         </div>
-        {this.props.children}
+
+        <footer>
+          Copyright © 2016 FusionWorks
+        </footer>
       </div>
     );
   }
