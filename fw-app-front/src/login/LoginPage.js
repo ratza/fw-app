@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
 import {changeName} from '../actions/change_username'
@@ -17,22 +16,16 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12">
+        <div className="row">
+          <div className="col-sm-6 col-sm-offset-3">
+            <div className="form-wrapper">
               <form action="" method="POST">
                 <input className='form-control' type="text" placeholder='Login' value={this.props.user.username} onChange={this.onChangeUsername} />
-                <input className='form-control' type="password" placeholder='Password' onChange={(event) => this.props.userChange({password: event.target.value})}/>
+                <input className='form-control' type="password" placeholder='Password' />
                 <input type="submit" className="btn" value='Submit'/>
               </form>
             </div>
-            <button onClick={() => this.props.changeNameLocalVariable({username: 'test'})}>Fallback</button>
           </div>
-        </div>
-
-        <div className="container">
-          <Link to='/'>go login</Link>
-          User: { this.props.user.username }
         </div>
       </div>
     );
@@ -44,8 +37,6 @@ const mapStateToProps = (state) => {
     user: state.user
   }
 }
-
-
 
 function matchDispatchToProps(dispatch){
   return bindActionCreators({changeNameLocalVariable: changeName}, dispatch);
