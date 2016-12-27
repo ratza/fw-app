@@ -22,7 +22,8 @@ class LoginPage extends Component {
               <form action="" method="POST">
                 <input className='form-control' type="text" placeholder='Login' value={this.props.user.username} onChange={this.onChangeUsername} />
                 <input className='form-control' type="password" placeholder='Password' />
-                <input type="submit" className="btn" value='Submit'/>
+                <input type="submit" className="btn btn-block btn-submit" value='Submit'/>
+                <p style={{color: '#000'}}>Testing Redux: {this.props.user.username}</p>
               </form>
             </div>
           </div>
