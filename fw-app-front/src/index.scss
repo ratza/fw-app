@@ -50,7 +50,7 @@ body {
 
   footer {
     display: flex;
-    height: 80px;
+    height: 50px;
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid #ddd;
@@ -62,4 +62,23 @@ body {
   padding: 30px;
   border-radius: 5px;
   background-color: rgba(255,255,255, 0.6);
+}
+
+.form-control {
+  border: 0;
+  box-shadow: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.btn-submit {
+  color: #fff;
+  background-color: #5b9877;
+  border: 1px solid #5b9877;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: #5b9877;
+    box-shadow: none;
+  }
 }
